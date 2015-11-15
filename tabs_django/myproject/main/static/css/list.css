@@ -1,0 +1,17 @@
+
+
+#results_table {
+    width: 90%;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+#results_table th.date {
+    width: 100px;
+}
+
+#results_table th.committee {
+    width: 100px;
+}
+
+

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block head %}
+		
+<script type="text/javascript">
+    function initialize() {
+        $.get("/scrape/", {search_id: "{{ search_id }}"},
+            function( resp ) {
+                data = '';
+                for (var i = 0; i < resp.length; i++) {
+                    data += '<table class="results-table table table-striped table-hover">';
+                    data += '  <thead>';
+                    data += '    <tr>';
+                    data += '	  <th class="Date">' + resp[i].meeting_date + '</th>';
+                    data += '	  <th class="Itemid"><a href="' + resp[i].item_url + '">' + resp[i].item_num + '</a></th>';
+                    data += '    </tr>';
+                    data += '  </thead>';
+                    data += '  <tbody>';
+                    data += '    <tr><td colspan=3 class="ItemSummary">';
+                    data += '      ' + resp[i].title;
+                    data += '      <div class="Committee">' + resp[i].committee + '</div>';
+                    data += '    </td></tr>';
+                    data += '  </tbody>';
+                    data += '</table>';
+                }
+                $('#ResultList').html(data);
+                $('#search_status').html('<div class="ResultsFor"><h2> What you searched for :</h2> {{ search_query }}</div>');
+            }, "json"
+        );
+    }
+</script>
+
+   
+{% endblock %}
+
+
+{% block bodytag %}<body onload="initialize()">{% endblock %}
+
+
+{% block content %}
+
+
+<div class='ResultsContent'>
+
+	<div class='ResultsSidebar'>
+
+		<h3>Sign up for an <span style='color:#7e023f'>email alert</span> based on 
+		these search results.</h3>
+		<form id="submit_form" action="/register/" method="post">{% csrf_token %}
+		  <input type="hidden" name="search_id" value="{{ search_id }}">
+		  <table><tr><td valign='top'>
+		  <input type="text" name="email" class="" placeholder="your@email.com">
+		  </td><td>
+		  <input class="RegistrationButton" type="image" src="/static/img/button_register.png" alt="Submit" /></td></tr></table>
+		</form>
+		
+		<br /><br />
+		With TABS email alert system, you will be notified whenever a new record is added to the city archives that contains one or more of your search terms. <a href='/about/'>READ MORE>></a>
+	
+					
+	</div>
+
+
+
+
+	<div class='Results'>
+	
+	    <div id="search_status">
+	      <h1>Searching...</h1>
+	    </div>
+		
+		
+		<div id="ResultList">
+		</div>
+		
+	</div><? // end of Results ?>
+</div> <? // End of Content ?>
+
+
+{% endblock %}
+

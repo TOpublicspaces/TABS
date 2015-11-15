@@ -1,0 +1,250 @@
+[
+  {
+    "pk": 4, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "contenttype", 
+      "name": "content type", 
+      "app_label": "contenttypes"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "group", 
+      "name": "group", 
+      "app_label": "auth"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "user", 
+      "name": "user", 
+      "app_label": "auth"
+    }
+  }, 
+  {
+    "pk": "6f356d764fc82102543e338fc2b2f337", 
+    "model": "sessions.session", 
+    "fields": {
+      "expire_date": "2013-04-16T02:34:42.122Z", 
+      "session_data": "ODk1Y2MzZWY4ZTVkNjk1YmExN2Q1ZDExNDU1ZmUxNDZkNjY4NTEyZTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "sites.site", 
+    "fields": {
+      "domain": "example.com", 
+      "name": "example.com"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "south.migrationhistory", 
+    "fields": {
+      "applied": "2012-12-02T18:50:56.234Z", 
+      "app_name": "main", 
+      "migration": "0001_initial"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "main.search", 
+    "fields": {
+      "item_status": "", 
+      "word_or_phrase": "I am a banana", 
+      "frequency": 5, 
+      "to_date": "", 
+      "committee": "", 
+      "recent_result": "", 
+      "from_date": ""
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "main.search", 
+    "fields": {
+      "item_status": "", 
+      "word_or_phrase": "subway", 
+      "frequency": 1, 
+      "to_date": "", 
+      "committee": "", 
+      "recent_result": "", 
+      "from_date": ""
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "main.search", 
+    "fields": {
+      "item_status": "", 
+      "word_or_phrase": "hamsters", 
+      "frequency": 1, 
+      "to_date": "", 
+      "committee": "", 
+      "recent_result": "", 
+      "from_date": ""
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "main.search", 
+    "fields": {
+      "item_status": "", 
+      "word_or_phrase": "garbage", 
+      "frequency": 2, 
+      "to_date": "", 
+      "committee": "", 
+      "recent_result": "-7128691914907596389", 
+      "from_date": ""
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "main.search", 
+    "fields": {
+      "item_status": "", 
+      "word_or_phrase": "cycling", 
+      "frequency": 1, 
+      "to_date": "", 
+      "committee": "", 
+      "recent_result": "-4252350976858887194", 
+      "from_date": ""
+    }
+  }, 
+  {
+    "pk": 1407, 
+    "model": "main.search", 
+    "fields": {
+      "item_status": "", 
+      "word_or_phrase": "schools", 
+      "frequency": 2, 
+      "to_date": "", 
+      "committee": "0", 
+      "recent_result": "-2050512214237067204", 
+      "from_date": ""
+    }
+  }, 
+  {
+    "pk": 1408, 
+    "model": "main.search", 
+    "fields": {
+      "item_status": "", 
+      "word_or_phrase": "700 huron", 
+      "frequency": 1, 
+      "to_date": "", 
+      "committee": "0", 
+      "recent_result": "-2524012920779279285", 
+      "from_date": ""
+    }
+  }, 
+  {
+    "pk": 1409, 
+    "model": "main.search", 
+    "fields": {
+      "item_status": "", 
+      "word_or_phrase": "activities in planning and development", 
+      "frequency": 1, 
+      "to_date": "", 
+      "committee": "0", 
+      "recent_result": "8148171276214038405", 
+      "from_date": ""
+    }
+  }, 
+  {
+    "pk": 1414, 
+    "model": "main.search", 
+    "fields": {
+      "item_status": "", 
+      "word_or_phrase": "park permit plan", 
+      "frequency": 1, 
+      "to_date": "", 
+      "committee": "0", 
+      "recent_result": "3308021801441591087", 
+      "from_date": ""
+    }
+  }, 
+  {
+    "pk": 1412, 
+    "model": "main.search", 
+    "fields": {
+      "item_status": "", 
+      "word_or_phrase": "park permit", 
+      "frequency": 2, 
+      "to_date": "", 
+      "committee": "0", 
+      "recent_result": "-8183367960380205189", 
+      "from_date": ""
+    }
+  }, 
+  {
+    "pk": 217, 
+    "model": "main.registration", 
+    "fields": {
+      "activation_key": "22dfab5bc1b", 
+      "activated": true, 
+      "last_result": "-3802631613256415637", 
+      "search_id": 1212, 
+      "agenda_list": "2013.BD116.7", 
+      "email": "everybody@hotmail.ca"
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "main.registration", 
+    "fields": {
+      "activation_key": "3b05601eb72", 
+      "activated": true, 
+      "last_result": "133022599859767062", 
+      "search_id": 76, 
+      "agenda_list": "2012.EX21.35/2012.MM25.2/2012.MM25.31/2012.MM25.32/2012.MM25.33/2012.MM25.34/2012.MM25.35/2012.MM25.36/2012.MM26.19/2012.MM26.20/2012.MM28.13/2012.RM28.5/2012.ST8.1/2013.CD18.2/2013.MM30.13/2013.MM30.14/2013.MM30.15/2013.MM30.19/2013.MM30.22/2013.MM32.15/2013.MM32.16/2013.MM32.17/2013.TE21.100/2013.TE23.61", 
+      "email": "someone@gmail.com"
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_site", 
+      "name": "Can add site", 
+      "content_type": [
+        "sites", 
+        "site"
+      ]
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_migrationhistory", 
+      "name": "Can delete migration history", 
+      "content_type": [
+        "south", 
+        "migrationhistory"
+      ]
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2012-12-02T19:08:52.980Z", 
+      "object_repr": "info@tabsontoronto.ca (Zoo (5))", 
+      "object_id": "1", 
+      "change_message": "Changed email and last_result.", 
+      "user": [
+        "admin"
+      ], 
+      "content_type": [
+        "main", 
+        "registration"
+      ]
+    }
+  }
+]

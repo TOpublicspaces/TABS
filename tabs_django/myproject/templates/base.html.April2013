@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{% block title %}Tabs Toronto{% endblock %}</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="en" /> 
+    <meta name="keywords" content = "toronto, city council" />
+    <meta name="description" content="Notification system for Toronto City Council." />
+    
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href='http://fonts.googleapis.com/css?family=Emblema+One' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Norican' rel='stylesheet' type='text/css'/>
+    
+    <!-- link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/static/js/bootstrap.min.js"></script -->
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="/static/js/dictionary.js"></script>
+    
+    <link rel="stylesheet" href="/static/css/tabs.css" type="text/css" />
+    
+    <script>
+	$(document).ready(function(){
+	  $(".btn1").click(function(){
+		$("p").slideUp();
+	  });
+	  $(".btn2").click(function(){
+		$("p").slideDown();
+	  });
+	  $("p").hide();
+	  $( "#main_search_box" ).autocomplete({
+            source: availableTags
+        });
+	});
+	</script>
+    
+    {% block head %}<!-- Start of css headers --><!-- End of css headers -->{% endblock %}
+
+    {% block javascript %}
+    {% endblock %}
+    
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1817171-11']);
+  _gaq.push(['_setDomainName', 'tabstoronto.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  
+</head>
+{% block bodytag %}<body>{% endblock %}
+
+<div class='MainDiv'>
+
+    <header>
+            <nav>
+			<div class=MainNav>
+			<a href="/about/" class="NavButton">About</a>
+			<a href="/privacy/" class="NavButton">Privacy Policy</a>
+            <a href="/contact/" class="NavButton">Contact</a>
+			</div>
+            </nav>
+	</header>
+	
+	{% if message %}
+    <h2>{{ message }}</h2>
+    {% endif %}
+            
+    <div class='SearchDiv'>
+		
+            <h1 style='float:left'>
+			<a href='/'><img src='/static/img/TabsLogo.png' border='0' class='Logo'></a></h1>
+				 
+				 
+			<form action="/search/" method="get" id="search_form">
+			
+			<fieldset class="searchField">
+			<table><tr><td>
+			<input id="main_search_box" class="transparent query" name="query" type="search" 
+					placeholder="Search for a keyword or phrase..."
+				/></td><td>
+				
+				
+				<input class='SearchButton' type="image" src="/static/img/searchbutton.png" alt="Submit" />
+					
+				</td></tr></table>
+			
+			</fieldset>
+	
+		<div class='SearchOptions'>
+		<input type='radio' name='advancedsearch' value='Advanced' class="btn2">
+		<span style='color:#fff'>Advanced Search  
+		<input type='radio' align='absmiddle' name='advancedsearch' value='Basic' class="btn1" checked>
+		Basic Search</span>
+		</div>
+
+	<br />
+            </a>
+            
+
+	<p class='AdvancedSearch' style='margin:10px 80px;padding:20px 50px;background-color:rgba(255,255,255,0.2);'>
+	
+
+	<strong style='display:block;font-size:16px;margin-bottom:20px;width:100%;border-bottom:1px solid #000;'>Advanced Search Options</strong>
+			<strong style='margin-right:20px;' class='SearchLabel'>Meeting Date Range  </strong>
+				<span class="from">
+					<label for="fromDate">From: </label>
+					<a href="javascript:;">
+					<input type="text" name="fromDate" placeholder="YYYY-MM-DD" value="" id="fromDate" style="width:100px;"></a>
+				</span>
+
+				<span class="to" style='margin-left:20px;'>
+					<label for="toDate">To: </label>
+					<a href="javascript:;">
+					<input type="text" name="toDate" placeholder="YYYY-MM-DD" value="" id="toDate" style="width:100px; cursor:hand"></a>
+				</span>
+				
+	<br /><br />
+
+			<label for="decision_body" class='SearchLabel'>Committee:</label>
+						
+			<select name="decisionBodyId" id="decision_body" class="textbox">
+
+			<option value="0" selected="selected"> +--Select a Committee --+ </option> 
+			<option value="581">Aboriginal Affairs Committee (2010-2014)</option>
+			<option value="242">Aboriginal Affairs Committee (2006-2010)</option>
+			<option value="346">Advisory Committee on Long-Term Care Homes and Services (2010-2014)</option>
+			<option value="81">Advisory Committee on Long-Term Care Homes and Services (2006-2010)</option>
+			<option value="421">Affordable Housing Committee (2010-2014)</option>
+			<option value="15">Affordable Housing Committee (2006-2010)</option>
+			<option value="363">Audit Committee (2010-2014)</option>
+			<option value="18">Audit Committee (2006-2010)</option>
+			<option value="342">Bid Committee (2010-2014)</option>
+			<option value="181">Bid Committee (2006-2010)</option>
+			<option value="401">Board of Directors of the Toronto Atmospheric Fund (2010-2014)</option>
+			<option value="321">Board of Health (2010-2014)</option>
+			<option value="14">Board of Health (2006-2010)</option>
+			<option value="782">Board of Health AIDS Prevention Community Investment Program Review Panel (2010-2014)</option>
+			<option value="541">Board of Health Budget Sub-Committee (2010-2014)</option>
+			<option value="781">Board of Health Drug Prevention Community Investment Program Review Panel (2010-2014)</option>
+			<option value="371">Board of Management of the Toronto Zoo (2010-2014)</option>
+			<option value="241">Board of Management of the Toronto Zoo (2006-2010)</option>
+			<option value="362">Budget Committee (2010-2014)</option>
+			<option value="16">Budget Committee (2006-2010)</option>
+			<option value="462">Budget Sub-Committee for Etobicoke York, and Toronto and East York Consultation (2010-2014)</option>
+			<option value="461">Budget Sub-Committee for Scarborough and North York Consultation (2010-2014)</option>
+			<option value="661">CDR Core Service Review Subcommittee (2010-2014)</option>
+			<option value="261">City Council (2010-2014)</option>
+			<option value="2">City Council (2006-2010)</option>
+			<option value="382">Civic Appointments Committee (2010-2014)</option>
+			<option value="22">Civic Appointments Committee (2006-2010)</option>
+			<option value="621">Civic Appointments Committee Panel 1 (2010-2014)</option>
+			<option value="622">Civic Appointments Committee Panel 2 (2010-2014)</option>
+			<option value="623">Civic Appointments Committee Panel 3 (2010-2014)</option>
+			<option value="624">Civic Appointments Committee Panel 4 (2010-2014)</option>
+			<option value="625">Civic Appointments Committee Panel 5 (2010-2014)</option>
+			<option value="626">Civic Appointments Committee Panel 6 (2010-2014)</option>
+			<option value="627">Civic Appointments Committee Panel 7 (2010-2014)</option>
+			<option value="681">Civic Appointments Committee Panel 8 (2010-2014)</option>
+			<option value="364">Community Development and Recreation Committee (2010-2014)</option>
+			<option value="3">Community Development and Recreation Committee (2006-2010)</option>
+			<option value="643">Community Partnership and Investment Program Appeals Committee (2010-2014)</option>
+			<option value="521">Compliance Audit Committee (2010-2014)</option>
+			<option value="441">Debenture Committee (2010-2014)</option>
+			<option value="221">Debenture Committee (2006-2010)</option>
+			<option value="601">Disability Issues Committee (2010-2014)</option>
+			<option value="365">Economic Development Committee (2010-2014)</option>
+			<option value="4">Economic Development Committee (2006-2010)</option>
+			<option value="381">Employee and Labour Relations Committee (2010-2014)</option>
+			<option value="17">Employee and Labour Relations Committee (2006-2010)</option>
+			<option value="264">Etobicoke York Community Council (2010-2014)</option>
+			<option value="12">Etobicoke York Community Council (2006-2010)</option>
+			<option value="761">Etobicoke York Community Council Arena Board Nominating Panel (2010-2014)</option>
+			<option value="262">Executive Committee (2010-2014)</option>
+			<option value="1">Executive Committee (2006-2010)</option>
+			<option value="6">General Government Committee (2006-2010)</option>
+			<option value="366">Government Management Committee (2010-2014)</option>
+			<option value="61">Government Management Committee (2006-2010)</option>
+			<option value="821">Graffiti Panel (2010-2014)</option>
+			<option value="801">Holiday Shopping Subcommittee (2010-2014)</option>
+			<option value="367">Licensing and Standards Committee (2010-2014)</option>
+			<option value="8">Licensing and Standards Committee (2006-2010)</option>
+			<option value="265">North York Community Council (2010-2014)</option>
+			<option value="13">North York Community Council (2006-2010)</option>
+			<option value="762">North York Community Council Arena Board Nominating Panel (2010-2014)</option>
+			<option value="368">Parks and Environment Committee (2010-2014)</option>
+			<option value="7">Parks and Environment Committee (2006-2010)</option>
+			<option value="369">Planning and Growth Management Committee (2010-2014)</option>
+			<option value="9">Planning and Growth Management Committee (2006-2010)</option>
+			<option value="343">Property Standards - Etobicoke York Panel (2010-2014)</option>
+			<option value="82">Property Standards - Etobicoke York Panel (2006-2010)</option>
+			<option value="341">Property Standards - North York Panel (2010-2014)</option>
+			<option value="101">Property Standards - North York Panel (2006-2010)</option>
+			<option value="344">Property Standards - Scarborough Panel (2010-2014)</option>
+			<option value="102">Property Standards - Scarborough Panel (2006-2010)</option>
+			<option value="345">Property Standards - Toronto and East York Panel (2010-2014)</option>
+			<option value="103">Property Standards - Toronto and East York Panel (2006-2010)</option>
+			<option value="741">Property Standards Committee (2010-2014)</option>
+			<option value="370">Public Works and Infrastructure Committee (2010-2014)</option>
+			<option value="5">Public Works and Infrastructure Committee (2006-2010)</option>
+			<option value="201">SSO and Recycling Infrastructure Sub-Committee (2006-2010)</option>
+			<option value="266">Scarborough Community Council (2010-2014)</option>
+			<option value="11">Scarborough Community Council (2006-2010)</option>
+			<option value="642">Seniors Strategy Subcommittee (2010-2014)</option>
+			<option value="361">Sign Variance Committee (2010-2014)</option>
+			<option value="281">Sign Variance Committee (2006-2010)</option>
+			<option value="263">Striking Committee (2010-2014)</option>
+			<option value="21">Striking Committee (2006-2010)</option>
+			<option value="861">Subcommittee on Establishment of Local Appeal Body (2010-2014)</option>
+			<option value="372">Toronto Preservation Board (2010-2014)</option>
+			<option value="83">Toronto Preservation Board (2006-2010)</option>
+			<option value="267">Toronto and East York Community Council (2010-2014)</option>
+			<option value="10">Toronto and East York Community Council (2006-2010)</option>
+			<option value="763">Toronto and East York Community Council Arena Board Nominating Panel 1 (2010-2014)</option>
+			<option value="764">Toronto and East York Community Council Arena Board Nominating Panel 2 (2010-2014)</option>
+			<option value="881">Toronto and East York Community Council Casino Subcommittee (2010-2014)</option>
+			</select>
+
+	
+		<label for="item_status" style='margin-left:40px;' class='SearchLabel'>Item Status: </label>
+
+			<select name="itemStatus" id="item_status" class="textbox">
+			<option value="" selected="selected"> +--Select a Status --+ </option>
+			<option value="ADOPTED">Adopted</option>
+			<option value="AMENDED">Amended</option>
+			<option value="CONFRMED">Confirmed</option>
+			<option value="POSTPONE">Deferred</option>
+			<option value="INT_FAIL">Intro Failed</option>
+			<option value="NO_ACTN">No Action</option>
+			<option value="NOTDFIL">Noted/Filed</option>
+			<option value="RECEIVED">Received</option>
+			<option value="REFERRED">Referred</option>
+			<option value="RESCIND">Rescinded</option>
+			<option value="WITHDRAW">Withdrawn</option>
+			<option value="WO_RECS">Without Recs</option>
+
+			</select>
+
+</p>
+	
+	</form>
+<!-- End SearchForm -->
+
+
+</div> <!-- End SearchContent -->
+
+    <!-- Start of content -->
+    {% block content %}{% endblock %}
+    <!-- End of content -->
+
+<div class='ContentDiv'>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<!--div class='Video'>
+	<iframe width="300" height="225" src="http://www.youtube.com/embed/b54SQNG3Ip0" frameborder="0" allowfullscreen></iframe>
+	</div-->
+
+	<h1>Welcome to TABS On Toronto</h1>
+
+	TABS makes searching through government records easy. Search for keywords, add filters, discover related information, and signup to receive email alerts. If you are an engaged resident, policy expert, journalist or busy bureaucrat, this tool's for you.   For more information, and instructions on how to use this site <a href='/about/'>READ MORE >></a>
+
+
+</div>
+
+
+    <div class=Footer>
+		<div class="TPSILogo">
+		<a href='http://publicspaces.ca/'>
+		<img src='/static/img/production_of.png'>
+		<img src='/static/img/tpsi_logo.png' width='175' class='Logo'></a>
+		</div>
+	</div>
+	
+</div> <!-- End MainDiv -->
+
+</body>
+</html>
